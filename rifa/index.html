@@ -1,0 +1,121 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#07080C"><link rel="icon" href="/favicon.ico">
+<title>Rifa de la botella · La llave secreta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800;900&family=Playfair+Display:ital,wght@1,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}[hidden]{display:none!important}
+:root{--ink:#07080C;--gold:#E9B85A;--gold-hi:#FFE3A3;--gold-lo:#B07A1E;--white:#fff;--mute:rgba(255,255,255,.66);--err:#ff8f8f;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;--serif:"Playfair Display",Georgia,serif;--body:"Figtree",system-ui,-apple-system,sans-serif;color-scheme:dark}
+html{background:var(--ink)}
+body{margin:0;min-height:100vh;min-height:100dvh;font-family:var(--body);color:var(--white);background:radial-gradient(120% 60% at 50% 100%,#3a2a0c,transparent 70%),var(--ink)}
+main{max-width:460px;margin:0 auto;padding:max(22px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));display:flex;flex-direction:column;gap:16px}
+.top{display:flex;align-items:center;gap:10px}.top img.p{height:22px}.top img.h{height:38px}.top span{opacity:.55}
+.eb{font-family:var(--display);font-weight:500;font-size:11px;letter-spacing:.16em;color:var(--gold)}
+h1{margin:0;font-family:var(--display);font-weight:900;font-size:clamp(30px,10vw,40px);line-height:.98;letter-spacing:-.02em}
+.lead{margin:0;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.3}
+.goldtxt{background:linear-gradient(100deg,var(--gold-hi),var(--gold) 50%,var(--gold-lo));-webkit-background-clip:text;background-clip:text;color:transparent}
+form{display:flex;flex-direction:column;gap:14px;margin-top:6px}
+label{display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:15px;color:rgba(255,255,255,.85)}
+.in{display:flex;align-items:center;gap:10px;height:56px;padding:0 16px;border-radius:14px;background:rgba(255,255,255,.07);border:1.5px solid rgba(233,184,90,.5)}
+.in:focus-within{border-color:var(--gold);box-shadow:0 0 0 3px rgba(233,184,90,.25)}
+.in b{color:var(--gold);font-weight:600;font-size:18px}
+.in input{flex:1;min-width:0;height:100%;border:0;background:none;color:var(--white);font:600 18px var(--body);outline:none}
+.in input::placeholder{color:rgba(255,255,255,.38);font-weight:400}
+.fe{color:var(--err);font-size:13px;font-weight:500;min-height:0}
+.btn{height:58px;border:0;border-radius:99px;cursor:pointer;font:800 18px var(--display);color:var(--ink);background:linear-gradient(100deg,var(--gold-hi),var(--gold) 50%,var(--gold-lo));box-shadow:0 0 30px rgba(233,184,90,.45)}
+.btn:disabled{filter:grayscale(.6) brightness(.7);cursor:default}
+.btn:focus-visible,.ig:focus-visible,.link:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+.fine{margin:0;font-size:13px;line-height:1.45;color:rgba(255,255,255,.55)}
+.ig{display:flex;align-items:center;justify-content:center;height:52px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.25);color:var(--white);text-decoration:none;font-weight:600;font-size:15px}
+.msg{padding:12px 14px;border-radius:12px;background:rgba(255,143,143,.12);color:var(--err);font-size:14px}
+.badge{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font:900 40px var(--display);color:var(--ink);background:linear-gradient(135deg,var(--gold-hi),var(--gold) 50%,var(--gold-lo));box-shadow:0 0 40px rgba(233,184,90,.55);margin-top:24px}
+.badge.wait{background:rgba(255,255,255,.08);border:2px solid rgba(233,184,90,.6);color:var(--gold);box-shadow:none;font-size:34px}
+.box{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:18px;background:rgba(233,184,90,.08);border:1px solid rgba(233,184,90,.35)}
+.box p{margin:0;font-weight:500;font-size:15px;line-height:1.4}
+.link{align-self:flex-start;background:none;border:0;padding:4px 0;color:var(--mute);font:500 14px var(--body);text-decoration:underline;cursor:pointer}
+</style></head><body>
+<main>
+  <div class="top"><img class="p" src="https://pistisgroup.co/f/xibkgk6c/assets/pistis.svg" alt="Pistis"><span>×</span><img class="h" src="https://pistisgroup.co/f/xibkgk6c/assets/holly.svg" alt="Holly Club"></div>
+
+  <section id="vForm">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="eb">LA LLAVE SECRETA · HOLLY CLUB</div>
+      <h1>RIFA DE LA<br>BOTELLA</h1>
+      <p class="lead goldtxt">Inscríbete y mira la pantalla: la tragaperras elige quién se la lleva.</p>
+    </div>
+    <form id="f" novalidate>
+      <label>Tu nombre<span class="in"><input id="nombre" name="nombre" autocomplete="given-name" maxlength="30" placeholder="Ej: Valentina R." required></span><span class="fe" id="eNombre"></span></label>
+      <label>Tu celular<span class="in"><b>+57</b><input id="tel" name="tel" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="14" placeholder="300 123 4567" required></span><span class="fe" id="eTel"></span></label>
+      <div class="msg" id="err" role="alert" hidden></div>
+      <button class="btn" id="go" type="submit">Entrar a la rifa</button>
+      <p class="fine">Usamos tu celular solo para avisarte si ganas. Para reclamar la botella debes estar en Holly Club.</p>
+    </form>
+  </section>
+
+  <section id="vOk" hidden>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="badge" aria-hidden="true">✓</div>
+      <h1 id="okTitle">¡LISTO!</h1>
+      <p class="lead goldtxt">Ya estás en la rifa de la botella.</p>
+      <div class="box">
+        <div class="eb">LO QUE SIGUE</div>
+        <p>1. Mira la pantalla: cuando termine la cuenta regresiva, gira la tragaperras.</p>
+        <p>2. Si sale tu nombre, pasa por tu botella a la barra.</p>
+        <p>3. Si no ganas esta vez, sigues en las próximas rifas de la noche.</p>
+      </div>
+      <p class="fine" id="okTel"></p>
+      <button class="link" type="button" data-again>Inscribir a otra persona</button>
+    </div>
+  </section>
+
+  <section id="vNext" hidden>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="badge wait" aria-hidden="true">⏳</div>
+      <h1 style="font-size:clamp(26px,8.4vw,34px)">ESTA RIFA<br>YA ESTÁ GIRANDO</h1>
+      <p class="lead goldtxt">Quedaste inscrito para la próxima rifa.</p>
+      <p class="fine" style="font-size:15px;color:rgba(255,255,255,.8)">Rifamos una botella cada 20 matches y otra cuando la publicación llegue a 500 likes. No tienes que volver a inscribirte.</p>
+      <button class="link" type="button" data-again>Inscribir a otra persona</button>
+    </div>
+  </section>
+
+  <a class="ig" href="https://www.instagram.com/p/DfYRaEWm26W/" target="_blank" rel="noopener">Apóyanos con un like en Instagram&nbsp;&nbsp;→</a>
+</main>
+<script>
+(() => {
+const SB = 'https://fsrozgzetaqnpbwdnnsk.supabase.co/rest/v1/rpc/';
+const SB_KEY = 'sb_publishable_9rLA0JFfOpUEMp9sbDzhLQ_aRcHudDS';
+const SLUG = 'llave-xibkgk6c';
+const $ = id => document.getElementById(id);
+const store = { get(){ try { return JSON.parse(localStorage.getItem('rifa-' + SLUG) || 'null'); } catch { return null; } },
+                set(v){ try { localStorage.setItem('rifa-' + SLUG, JSON.stringify(v)); } catch {} },
+                clear(){ try { localStorage.removeItem('rifa-' + SLUG); } catch {} } };
+function view(v){ ['vForm','vOk','vNext'].forEach(id => $(id).hidden = id !== v); window.scrollTo(0, 0); }
+function showOk(r){ $('okTitle').textContent = `¡LISTO, ${r.nombre.split(' ')[0].toUpperCase()}!`; $('okTel').textContent = `Inscrito con el celular terminado en ${r.d}.`; view(r.next ? 'vNext' : 'vOk'); }
+const digits = s => String(s || '').replace(/\D/g, '');
+function normTel(s){ let d = digits(s); if (d.length === 12 && d.startsWith('57')) d = d.slice(2); return d; }
+$('tel').addEventListener('input', e => { const d = digits(e.target.value).slice(0, 12); e.target.value = d.length > 6 ? d.replace(/^(\d{3})(\d{3})(\d+)$/, '$1 $2 $3') : d.length > 3 ? d.replace(/^(\d{3})(\d+)$/, '$1 $2') : d; });
+document.querySelectorAll('[data-again]').forEach(b => b.addEventListener('click', () => { store.clear(); $('f').reset(); view('vForm'); $('nombre').focus(); }));
+$('f').addEventListener('submit', async e => {
+  e.preventDefault();
+  const nombre = $('nombre').value.trim().replace(/\s+/g, ' '), tel = normTel($('tel').value);
+  let bad = false;
+  $('eNombre').textContent = nombre.length < 2 ? 'Escribe tu nombre.' : ''; if (nombre.length < 2) bad = true;
+  $('eTel').textContent = /^3\d{9}$/.test(tel) ? '' : 'Escribe un celular de 10 dígitos que empiece por 3.'; if (!/^3\d{9}$/.test(tel)) bad = true;
+  $('err').hidden = true;
+  if (bad) { (nombre.length < 2 ? $('nombre') : $('tel')).focus(); return; }
+  $('go').disabled = true; $('go').textContent = 'Inscribiendo…';
+  try {
+    const r = await fetch(SB + 'fiesta_inscribir', {method:'POST', headers:{apikey: SB_KEY, 'Content-Type':'application/json'}, body: JSON.stringify({p_slug: SLUG, p_nombre: nombre, p_tel: tel})});
+    const j = r.ok ? await r.json() : null;
+    if (j && j.ok){ store.set({nombre: j.nombre, d: j.d}); showOk(j); }
+    else {
+      const m = {invalid_name:'Revisa tu nombre.', invalid_phone:'Revisa tu celular: 10 dígitos que empiecen por 3.', full:'La rifa está llena por esta noche.', not_found:'Esta rifa ya no está disponible.'};
+      $('err').textContent = (j && m[j.error]) || 'No pudimos inscribirte. Inténtalo otra vez.'; $('err').hidden = false;
+    }
+  } catch { $('err').textContent = 'Sin conexión. Revisa tu internet e inténtalo otra vez.'; $('err').hidden = false; }
+  finally { $('go').disabled = false; $('go').textContent = 'Entrar a la rifa'; }
+});
+const saved = store.get(); if (saved && saved.nombre) showOk({...saved, next:false});
+})();
+</script>
+</body></html>
